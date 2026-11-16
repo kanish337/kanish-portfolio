@@ -3,41 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kanish Portfolio</title>
+<title>Kanish | Personal Portfolio</title>
 
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
-  background: #090909;
-  color: white;
-  font-family: Arial;
-  text-align: center;
-  margin: 0;
+    background: #09090f;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 header {
-  background: #171020;
-  padding: 25px;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #12101c;
+    position: sticky;
+    top: 0;
 }
 
-h1 {
-  color: #b56cff;
-  font-size: 42px;
+.logo {
+    color: #bd83ff;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #bd83ff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 15px;
+}
+
+.hero h1 span {
+    color: #bd83ff;
+}
+
+.hero p {
+    color: #b8b8c5;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 13px 28px;
+    background: #913cff;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
 }
 
 section {
-  padding: 55px 15px;
+    padding: 75px 10%;
+    text-align: center;
+}
+
+h2 {
+    color: #bd83ff;
+    font-size: 32px;
+    margin-bottom: 25px;
 }
 
 .card {
-  background: #1c1625;
-  padding: 25px;
-  margin: 20px auto;
-  border-radius: 15px;
-  max-width: 500px;
+    background: #171522;
+    padding: 28px;
+    margin: 15px auto;
+    border-radius: 15px;
+    max-width: 650px;
+    border: 1px solid #33234b;
 }
 
-a {
-  color: #c58cff;
+.card p {
+    color: #c5c5d0;
+    line-height: 1.8;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: #211832;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #d7b5ff;
+}
+
+footer {
+    background: #12101c;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 7px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
 }
 </style>
 </head>
@@ -45,37 +146,76 @@ a {
 <body>
 
 <header>
-<h2>KANISH.</h2>
-<p>My Personal Portfolio</p>
+    <div class="logo">KANISH.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section>
-<h1>Hello, I'm Kanish</h1>
-<h3>B.Tech CSE Student</h3>
-<p>GLA University</p>
+<div class="hero" id="home">
+    <p>WELCOME TO MY PORTFOLIO</p>
+    <h1>Hi, I'm <span>Kanish</span></h1>
+    <h3>B.Tech Computer Science Student</h3>
+    <p>GLA University</p>
+    <p>Learning Programming, Technology and Web Development.</p>
+    <a href="#about" class="btn">Explore My Portfolio</a>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+        Hello! I am Kanish, a B.Tech Computer Science
+        student at GLA University. I am passionate about
+        technology, programming and creating websites.
+        I enjoy learning new skills and building projects.
+        </p>
+    </div>
 </section>
 
-<div class="card">
-<h2>About Me</h2>
-<p>I am a Computer Science student.
-I love learning Java, HTML, CSS and Web Development.</p>
-</div>
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div class="skill">Java</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C Programming</div>
+    </div>
+</section>
 
-<div class="card">
-<h2>My Skills</h2>
-<p>Java | HTML | CSS | JavaScript</p>
-</div>
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+        <h3>Personal Portfolio</h3>
+        <p>My personal website built using HTML and CSS.</p>
+    </div>
+    <div class="card">
+        <h3>Student Management System</h3>
+        <p>A basic student management project using Java.</p>
+    </div>
+    <div class="card">
+        <h3>ATM Banking System</h3>
+        <p>A simple banking application using Core Java.</p>
+    </div>
+</section>
 
-<div class="card">
-<h2>My Education</h2>
-<p>B.Tech Computer Science</p>
-<p>GLA University</p>
-</div>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <p>Let's connect and learn together!</p>
+        <p>Email: your-email@gmail.com</p>
+        <p>College: GLA University</p>
+    </div>
+</section>
 
-<div class="card">
-<h2>Contact</h2>
-<p>Email: your-email@gmail.com</p>
-</div>
+<footer>
+    © 2026 Kanish | Personal Portfolio
+</footer>
 
 </body>
 </html>
